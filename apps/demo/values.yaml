@@ -14,4 +14,4 @@ generic:
 preview:
   enabled: false
 hosts:
-- "demo-aurelienv.playground.padok.cloud"
+- "demo-back-aurelienv.playground.padok.cloud"
