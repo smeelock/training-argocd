@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: traefik
-  namespace: traefik
+  name: demo
+  namespace: demo
 spec:
   project: infrastructure
   source:
     repoURL: https://github.com/smeelock/training-argocd
     targetRevision: HEAD
-    path: ./apps/traefik
+    path: ./apps/demo
     helm:
       valueFiles:
         - values.yaml
   destination:
     name: in-cluster
-    namespace: traefik
+    namespace: demo
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
