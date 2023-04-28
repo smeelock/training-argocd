@@ -1,13 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: smeelock-root-app
+  name: argocd
+  namespace: argocd
 spec:
-  project: default
+  project: infrastructure
   source:
-    repoURL: https://github.com/smeelock/training-argocd.git
-    path: argocd-config
-    targetRevision: main
+    repoURL: https://github.com/smeelock/training-argocd
+    targetRevision: HEAD
+    path: ./apps/argocd
   destination:
-    server: https://kubernetes.default.svc
+    name: in-cluster
     namespace: argocd
