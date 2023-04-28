@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: demo
-  namespace: demo
+  namespace: argocd
 spec:
   project: infrastructure
   source:
